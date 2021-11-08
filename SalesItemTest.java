@@ -118,6 +118,70 @@ public class SalesItemTest
         setUpSalesItem.removeComment(6);
         assertEquals(1, setUpSalesItem.getNumberOfComments());
     }
+    /**
+     * Tests the method upvoteComment in the SalesItem class.
+     */
 
+    @Test
+    public void testUpvote()
+    {
+        assertEquals(true, setUpSalesItem.addComment("Tannia", "Nice", 4));
+        assertEquals(0, setUpSalesItem.getVotesForIndex(0));
+        setUpSalesItem.upvoteComment(0);
+        assertEquals(1, setUpSalesItem.getVotesForIndex(0));
+    }
+    /**
+     * Tests the method downvoteComment in the SalesItem class.
+     */
+    @Test
+    public void testDownvote()
+    {
+        assertEquals(true, setUpSalesItem.addComment("Tannia", "Nice", 4));
+        assertEquals(0, setUpSalesItem.getVotesForIndex(0));
+        setUpSalesItem.downvoteComment(0);
+        assertEquals(-1, setUpSalesItem.getVotesForIndex(0));
+    }
+    /**
+     * Tests the method findMostHelpfulComment() in the SalesItem class.
+     */
+    @Test
+    public void testMostHelpful()
+    {
+        assertEquals(true, setUpSalesItem.addComment("Tannia", "Nice", 4));
+        assertEquals(true, setUpSalesItem.addComment("Nicole", "Not too bad", 4));
+        setUpSalesItem.upvoteComment(0);
+        setUpSalesItem.upvoteComment(0);
+        setUpSalesItem.upvoteComment(1);
+        Comment comment1 = setUpSalesItem.findMostHelpfulComment();
+        assertEquals(comment1, comment1);
+        assertEquals(comment1, setUpSalesItem.findMostHelpfulComment());
+    }
+    /**
+     * Tests the constructor of the SalesItem class.
+     */
+    @Test
+    public void testConstructor()
+    {
+        SalesItem salesIte1 = new SalesItem("Blue car", 6000);
+        assertEquals("Blue car", salesIte1.getName());
+        assertEquals(6000, salesIte1.getPrice());
+        assertEquals(0, salesIte1.getNumberOfComments());
+    }
+    /**
+     * Tests the method findCommentByAuthor() in the SalesItem class.
+     */
+    @Test
+    public void testCommentByAuthor()
+    {
+        assertEquals(true, setUpSalesItem.addComment("Tannia", "nice", 4));
+        Comment comment1 = setUpSalesItem.getCommentByAuthor("Tannia");
+        assertEquals(comment1, comment1);
+        assertEquals(comment1, setUpSalesItem.getCommentByAuthor("Tannia"));
+    }
 }
+
+
+
+
+
 

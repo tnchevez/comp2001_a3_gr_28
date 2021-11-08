@@ -82,7 +82,9 @@ public class SalesItem
             comments.remove(index);
         }
     }
-    
+    public int getVotesForIndex(int index){
+        return comments.get(index).getVoteCount();   
+    }
     /**
      * Upvote the comment at 'index'. That is: count this comment as more helpful.
      * If the index is invalid, do nothing.
@@ -188,6 +190,11 @@ public class SalesItem
             }
         }
         return null;
+    }
+    
+    public Comment getCommentByAuthor(String author){
+        return findCommentByAuthor(author);
+
     }
     
     /**
