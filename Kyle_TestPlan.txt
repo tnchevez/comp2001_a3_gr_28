@@ -1,0 +1,14 @@
+
+
+SalesItem Class:
+
+getNumberOfComments(): Test the getNumberOfComments method by calling the getNumberOfComments method on a SalesItem with no comments yet added which should return 0. Test the method again but this time with a comment added and it should return 1.
+
+addComment(): Test the addComment method by adding a valid comment with an author name that has not been taken before and a valid rating, and this should return true. Continue testing the method with various cases of comments with the same author and invalid ratings which are outside the [1..5] list, all of which should return false.
+
+removeComment(): Begin the testing by adding 3 valid comments to the SalesItem, then continue by removing the first comment, proceed by calling the getNumberOfComments method to check the number of comments on the SalesItem which should return 2 at this point because 1 was removed.
+		 	Test the method furthermore by repeating the process and removing another comment which leaves the numberOfComments at 1. Lastly test the boundaries by removing 2 "non-existent" comments by removing 2 comments with the index -1 and 6, then call getNumberOfComments
+			after each which should return 1 because the removeComment method should do nothing.
+
+ratingInvalid(): The ratingInvalid method is a private method so create a small public method called testRatingInvalid in the SalesItem class that tests the ratingInvalid with various test cases such as all of the valid ratings which are [1..5] inclusively and test the boundaries by testing with 2 invalid ratings 0 and 6.
+			If the check fails it will print a statement saying the test case failed and return false.

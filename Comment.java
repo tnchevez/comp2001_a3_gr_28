@@ -54,6 +54,13 @@ public class Comment
     }
     
     /**
+     * Return the text of this comment.
+     */
+    public String getText()
+    {
+        return text;
+    }
+    /**
      * Return the rating of this comment.
      */
     public int getRating()

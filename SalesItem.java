@@ -151,6 +151,31 @@ public class SalesItem
     }
     
     /**
+     * Tests the ratingInvalid method with various cases. Return false if test failed.
+     * Valid ratings are in the range [1..5] inclusive.
+     */
+    public boolean testRatingInvalid()
+    {
+        // Test all valid ratings.
+        int i = 1;
+        while (i <= 5)
+        {
+            if (ratingInvalid(i) == true)
+            {
+                System.out.println("Test case failed with rating: " + i);
+                return false;
+            }
+            else
+                i++;
+        }
+        
+        // Test some invalid cases.
+        if (ratingInvalid(0) != true || ratingInvalid(6) != true)
+            System.out.println("Case failed with an invalid rating.");
+            return false;
+    }
+    
+    /**
      * Find the comment by the author with the given name.
      * 
      * @return The comment if it exists; null if it doesn't.

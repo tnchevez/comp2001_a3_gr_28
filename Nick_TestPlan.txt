@@ -1,0 +1,20 @@
+
+SalesItem Class
+
+-------------------
+getName(): The getName method will be tested by creating a new SalesItem object and confirming the method returns the name we created the object with.
+
+getPrice(): The getPrice method will be tested by creating a new SalesItem object and confirming the method returns the price we created the object with.
+
+
+
+Comment Class
+-------------------
+
+Comment(String author, String text, int rating): The Comment constructor will be tested by creating a new Comment object and calling its getter methods to confirm the object's fields have the correct values.
+
+upvote(): The upvote method will be tested by creating a new Comment object and calling the upvote method. Then the getVoteCount method will be called to confirm that the vote count changed accordingly.
+
+downvote(): The downvote method will be tested by creating a new Comment object and calling the downvote method. Then the getVoteCount method will be called to confirm that the vote count changed accordingly.
+
+getRating():The getRating method will be tested by creating a new Comment object with a rating of 3 and then calling the getRating method to verify it returns 3.
