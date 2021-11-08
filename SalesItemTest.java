@@ -8,7 +8,7 @@ import org.junit.Test;
 /**
  * The test class SalesItemTest.
  *
- * @author  (your name)
+ * @author  (Tannia)
  * @version (a version number or a date)
  */
 public class SalesItemTest
