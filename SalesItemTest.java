@@ -40,5 +40,19 @@ public class SalesItemTest
     {
     }
 
+    @Test
+    public void getName_test()
+    {
+        SalesItem test_item = new SalesItem("Nick", 123);
+        assertSame("Nick", test_item.getName());
+    }
+    
+    @Test
+    public void getPrice_test()
+    {
+        SalesItem test_item = new SalesItem("Nick", 123);
+        assertSame(123, test_item.getPrice());
+    }
+
 }
 
